@@ -1,5 +1,7 @@
 /* HERO */
-
+html, body{
+	overflow-x:hidden;
+}
 .clients-hero{
 	height:75vh;
 	position:relative;

@@ -3,6 +3,10 @@
 	background:#f5f7fa;
 }
 
+
+html, body{
+	overflow-x:hidden;
+}
 /* IMAGE */
 
 .detail-image{
