@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batigol Sports</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="product_details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+        <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+
+	<div class="container">
+
+		<a class="navbar-brand" href="#">
+			<img src="images/batigol-logo.png" alt="Batigol Sports" class="logo">
+		</a>
+
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navMenu">
+
+			<ul class="navbar-nav ms-auto align-items-lg-center">
+
+				<li class="nav-item">
+					<a class="nav-link" href="index.html">Home</a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="about.html">About</a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="products.html">Products</a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="clients.html">Clients</a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="contact.html">Contact</a>
+				</li>
+
+				<li class="nav-item ms-lg-3">
+					<a class="btn quote-btn" href="products.html">Get Quote</a>
+				</li>
+
+			</ul>
+
+		</div>
+
+	</div>
+
+</nav>
+    
+    <section class="product-detail">
+
+	<div class="container">
+
+		<div class="row align-items-center g-5">
+
+			<!-- IMAGE SIDE -->
+			<div class="col-lg-6" data-aos="fade-right">
+
+				<div class="detail-gallery">
+
+					<img src="images/jersey1.webp" class="main-img" id="mainImage">
+
+					<div class="thumbs">
+						<img src="images/jersey1.webp" class="thumb active">
+						<img src="images/jersey2.jpg" class="thumb">
+						<img src="images/jersey3.jpg" class="thumb">
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- INFO SIDE -->
+			<div class="col-lg-6" data-aos="fade-left">
+
+				<span class="product-category">Jerseys</span>
+
+				<h1 class="product-title">
+					Custom Team Jersey
+				</h1>
+
+				<p class="product-desc">
+					High-quality custom sports jersey designed for comfort,
+					performance, and durability. Perfect for teams, academies,
+					and tournaments.
+				</p>
+
+				<!-- FEATURES -->
+				<ul class="product-features">
+					<li><i class="fa-solid fa-check"></i> Breathable fabric</li>
+					<li><i class="fa-solid fa-check"></i> Sweat resistant</li>
+					<li><i class="fa-solid fa-check"></i> Custom design available</li>
+					<li><i class="fa-solid fa-check"></i> Durable stitching</li>
+				</ul>
+
+				<!-- PRICING + ORDER -->
+				<div class="product-pricing">
+
+					<h4 class="price">
+						₹<span id="pricePerItem">500</span> / piece
+					</h4>
+
+					
+
+					<!-- ORDER TYPE -->
+					<div class="order-type">
+
+						<label>
+							<input type="radio" name="orderType" value="bulk" checked>
+							Bulk Order
+						</label>
+
+						<label>
+							<input type="radio" name="orderType" value="custom">
+							Custom (Name & Number)
+						</label>
+
+					</div>
+
+					<!-- BULK -->
+					<div id="bulkSection">
+
+						<div class="option-group">
+							<label>Select Size:</label>
+							<select>
+								<option>S</option>
+								<option>M</option>
+								<option>L</option>
+								<option>XL</option>
+								<option>XXL</option>
+							</select>
+						</div>
+
+						<div class="quantity-box">
+							<label>Quantity:</label>
+							<input type="number" id="quantity" value="10" min="10">
+						</div>
+
+					</div>
+
+					<!-- CUSTOM -->
+					<div id="customSection" style="display:none;">
+
+						<h5>Player Details</h5>
+
+						<div id="playersContainer"></div>
+
+						<button type="button" class="add-player-btn" onclick="addPlayer()">
+							+ Add Player
+						</button>
+
+					</div>
+
+					<!-- TOTAL -->
+					<h5 class="total mt-3">
+						Total: ₹<span id="totalPrice">5000</span>
+					</h5>
+
+					<!-- BUTTON -->
+					<a href="#" class="btn detail-btn w-100 mt-3">
+						Request Quote
+					</a>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</section>
+<section class="clients">
+
+	<div class="container">
+
+		<h2 class="clients-title text-center mb-5" data-aos="fade-up">
+			Trusted By Leading Clubs
+		</h2>
+
+		<div class="row g-md-4 g-2 justify-content-center">
+
+			<div class="col-lg-3 col-md-4 col-6" data-aos="zoom-in">
+				<div class="client-card">
+					<img src="images/mun.png" alt="Al Sadd">
+				</div>
+			</div>
+
+			<div class="col-lg-3 col-md-4 col-6" data-aos="zoom-in" data-aos-delay="100">
+				<div class="client-card">
+					<img src="images/blksn.png" alt="Al Rayyan">
+				</div>
+			</div>
+
+			<div class="col-lg-3 col-md-4 col-6" data-aos="zoom-in" data-aos-delay="200">
+				<div class="client-card">
+					<img src="images/rma.webp" alt="Al Hilal">
+				</div>
+			</div>
+
+			<div class="col-lg-3 col-md-4 col-6" data-aos="zoom-in" data-aos-delay="300">
+				<div class="client-card">
+					<img src="images/acm.png" alt="Al Khor">
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+</section>
+
+
+
+<section class="testimonials">
+
+	<div class="container">
+
+		<h2 class="testimonials-title text-center mb-5" data-aos="fade-up">
+			What Our Clients Say
+		</h2>
+
+		<div class="owl-carousel testimonials-carousel">
+
+			<div class="testimonial-card">
+				<div class="profile">S</div>
+				<p>
+					Batigol delivered excellent quality jerseys for our team.
+					The customization and finishing were outstanding.
+				</p>
+				<h6>Sports Academy</h6>
+			</div>
+
+			<div class="testimonial-card">
+				<div class="profile">C</div>
+				<p>
+					Professional service and top-quality sportswear.
+					Our team uniforms were delivered exactly as requested.
+				</p>
+				<h6>Club Manager</h6>
+			</div>
+
+			<div class="testimonial-card">
+				<div class="profile">T</div>
+				<p>
+					The design and fabric quality exceeded expectations.
+					We will definitely work with Batigol again.
+				</p>
+				<h6>Tournament Organizer</h6>
+			</div>
+
+			<div class="testimonial-card">
+				<div class="profile">A</div>
+				<p>
+					Fast production and great communication throughout
+					the process. Our academy jerseys look amazing.
+				</p>
+				<h6>Academy Director</h6>
+			</div>
+
+			<div class="testimonial-card">
+				<div class="profile">F</div>
+				<p>
+					Batigol understands what athletes need. Comfortable
+					and durable sportswear for competitive teams.
+				</p>
+				<h6>Football Coach</h6>
+			</div>
+
+			<div class="testimonial-card">
+				<div class="profile">S</div>
+				<p>
+					Excellent customization options and high quality
+					materials. Highly recommended for sports teams.
+				</p>
+				<h6>School Sports Coordinator</h6>
+			</div>
+
+		</div>
+
+	</div>
+
+</section>
+
+
+
+    <section class="contact-section">
+
+	<div class="container">
+
+		<h2 class="contact-title text-center mb-5" data-aos="fade-up">
+			Contact Us
+		</h2>
+
+		<div class="row g-md-4 g-2 align-items-stretch">
+
+			<div class="col-lg-6" data-aos="fade-right">
+
+				<div class="contact-info">
+
+					<div class="contact-item">
+						<div class="contact-icon">
+							<i class="fa-solid fa-location-dot"></i>
+						</div>
+
+						<div>
+							<h5>Showroom</h5>
+							<p>
+								Batigol Sports<br>
+								Aziziya, Doha, Qatar
+							</p>
+						</div>
+					</div>
+
+
+					<div class="contact-item">
+						<div class="contact-icon">
+							<i class="fa-solid fa-phone"></i>
+						</div>
+
+						<div>
+							<h5>Phone</h5>
+							<p>
+								Tel: +974-44110644<br>
+								Mob: +974-30519990
+							</p>
+						</div>
+					</div>
+
+
+					<div class="contact-item">
+						<div class="contact-icon">
+							<i class="fa-solid fa-envelope"></i>
+						</div>
+
+						<div>
+							<h5>Email</h5>
+							<p>info@batigolsports.com</p>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+
+
+			<div class="col-lg-6" data-aos="fade-left">
+
+				<div class="contact-form">
+
+					<form>
+
+						<input type="text" placeholder="Your Name" required>
+
+						<input type="email" placeholder="Email Address" required>
+
+						<textarea rows="5" placeholder="Your Message"></textarea>
+
+						<button type="submit" class="contact-btn">
+							Send Message
+						</button>
+
+					</form>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</section>
+
+<footer class="site-footer">
+
+	<div class="container">
+
+		<div class="row g-4">
+
+			<div class="col-lg-4 col-md-6">
+
+				<div class="footer-brand">
+
+					<img src="images/batigol-logo.png" class="footer-logo">
+
+					<p>
+						Batigol Sports is a leading sportswear manufacturer in Qatar,
+						providing high-quality customized jerseys, uniforms and
+						training apparel for clubs, academies and institutions.
+					</p>
+
+					<div class="footer-social">
+
+						<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+						<a href="#"><i class="fa-brands fa-instagram"></i></a>
+						<a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+
+					</div>
+
+				</div>
+
+			</div>
+
+
+
+			<div class="col-lg-2 col-md-6">
+
+				<h4 class="footer-title">Quick Links</h4>
+
+				<ul class="footer-links">
+
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Products</a></li>
+					<li><a href="#">Clients</a></li>
+					<li><a href="#">Contact</a></li>
+
+				</ul>
+
+			</div>
+
+
+
+			<div class="col-lg-3 col-md-6">
+
+				<h4 class="footer-title">Products</h4>
+
+				<ul class="footer-links">
+
+					<li><a href="#">Jerseys</a></li>
+					<li><a href="#">Sports Uniforms</a></li>
+					<li><a href="#">Track Suits</a></li>
+					<li><a href="#">Training Wear</a></li>
+					<li><a href="#">Sports Caps</a></li>
+
+				</ul>
+
+			</div>
+
+
+
+			<div class="col-lg-3 col-md-6">
+
+				<h4 class="footer-title">Contact</h4>
+
+				<ul class="footer-contact">
+
+					<li>
+						<i class="fa-solid fa-location-dot"></i>
+						Aziziya, Doha, Qatar
+					</li>
+
+					<li>
+						<i class="fa-solid fa-phone"></i>
+						+974-44110644
+					</li>
+
+					<li>
+						<i class="fa-solid fa-envelope"></i>
+						info@batigolsports.com
+					</li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+
+
+		<div class="footer-bottom">
+
+			<p>
+				© 2026 Batigol Sports. All Rights Reserved.
+			</p>
+
+		</div>
+
+	</div>
+
+</footer>
+
+
+
+
+
+
+<script>
+
+	let lastScroll = 0;
+	const navbar = document.querySelector(".custom-navbar");
+
+	window.addEventListener("scroll", () => {
+
+		let currentScroll = window.pageYOffset;
+
+		if(currentScroll > 50){
+			navbar.classList.add("scrolled");
+		}else{
+			navbar.classList.remove("scrolled");
+		}
+
+		if(currentScroll > lastScroll){
+			navbar.style.top = "-100px";
+		}else{
+			navbar.style.top = "0";
+		}
+
+		lastScroll = currentScroll;
+
+	});
+
+</script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script src="index.js"></script>
+<script src="product_details.js"></script>
+<script>
+AOS.init({
+duration:1000,
+once:true
+});
+</script>
+
+</body>
+
+</html>

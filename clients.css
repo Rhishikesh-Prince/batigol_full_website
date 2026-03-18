@@ -1,0 +1,212 @@
+/* HERO */
+
+.clients-hero{
+	height:75vh;
+	position:relative;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	overflow:hidden;
+	margin-top:90px; /* adjust for navbar */
+}
+
+/* BACKGROUND IMAGE */
+
+.hero-bg{
+	position:absolute;
+	inset:0;
+	width:100%;
+	height:100%;
+	object-fit:cover;
+	z-index:1;
+	transform:scale(1.1);
+	animation:heroZoom 12s ease-in-out infinite alternate;
+}
+
+/* subtle zoom animation */
+
+@keyframes heroZoom{
+	from{ transform:scale(1.05); }
+	to{ transform:scale(1.15); }
+}
+
+/* OVERLAY */
+
+.hero-overlay{
+	position:absolute;
+	inset:0;
+	background:linear-gradient(135deg,#4b5e6d64,#0f2435);
+	opacity:0.85;
+	z-index:2;
+}
+
+/* CONTENT */
+
+.hero-content{
+	position:relative;
+	z-index:3;
+	max-width:800px;
+}
+
+/* TITLE */
+
+.clients-hero h1{
+	font-family:'Bebas Neue',sans-serif;
+	font-size:90px;
+	letter-spacing:5px;
+	color:white;
+	margin-bottom:10px;
+
+	text-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* SUBTEXT */
+
+.clients-hero p{
+	font-family:'Montserrat',sans-serif;
+	font-size:18px;
+	color:#ddd;
+	letter-spacing:1px;
+}
+
+/* DECORATIVE LINE */
+
+.hero-line{
+	width:80px;
+	height:3px;
+	background:#A81F45;
+	margin:20px auto 0;
+	border-radius:5px;
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+	.clients-hero{
+		height:55vh;
+	}
+
+	.clients-hero h1{
+		font-size:45px;
+	}
+
+	.clients-hero p{
+		font-size:14px;
+		padding:0 10px;
+	}
+
+}
+/* SECTION */
+
+.clients-page{
+	padding:120px 0;
+	background:#f5f7fa;
+	overflow:hidden;
+}
+
+/* GRID FIX */
+
+.clients-page .row{
+	justify-content:center;
+}
+
+/* CARD */
+
+.client-box{
+	background:white;
+	border-radius:18px;
+	padding:30px 20px;
+
+	height:100%;
+	min-height:340px;
+
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:flex-start;
+
+	text-align:center;
+
+	overflow:hidden; /* VERY IMPORTANT */
+	position:relative;
+
+	transition:0.4s;
+	box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* HOVER */
+
+.client-box:hover{
+	transform:translateY(-10px);
+	box-shadow:0 25px 50px rgba(0,0,0,0.15);
+}
+
+/* LOGO FIX (THIS IS THE MAIN ISSUE) */
+
+.client-logo-wrap{
+	width:90px;
+	height:90px;
+
+	display:flex;
+	align-items:center;
+	justify-content:center;
+
+	border-radius:50%;
+	background:#f1f1f1;
+
+	margin-bottom:15px;
+
+	overflow:hidden; /* prevent overflow */
+}
+
+/* FORCE IMAGE SIZE */
+
+.client-logo-wrap img{
+	width:60px;
+	height:60px;
+	object-fit:contain;
+
+	max-width:100%;
+	max-height:100%;
+
+	display:block;
+}
+
+/* TITLE */
+
+.client-box h5{
+	font-family:'Bebas Neue',sans-serif;
+	font-size:24px;
+	color:#1F4463;
+	margin-bottom:8px;
+}
+
+/* DESC */
+
+.client-desc{
+	font-family:'Montserrat',sans-serif;
+	font-size:14px;
+	color:#555;
+	line-height:1.5;
+}
+
+/* REVIEW */
+
+.client-review{
+	font-size:13px;
+	font-style:italic;
+	color:#A81F45;
+	margin-top:auto;
+	padding-top:10px;
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+	.client-box{
+		min-height:auto;
+	}
+
+}

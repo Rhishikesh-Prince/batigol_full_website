@@ -1,0 +1,143 @@
+.product-list-page{
+	padding:120px 0;
+	background:#f5f7fa;
+}
+
+/* TITLE */
+
+.list-title{
+	font-family:'Bebas Neue',sans-serif;
+	font-size:70px;
+	letter-spacing:3px;
+	color:#1F4463;
+}
+
+/* SEARCH */
+
+.search-box{
+	max-width:500px;
+	margin:auto;
+	display:flex;
+	background:white;
+	border-radius:50px;
+	overflow:hidden;
+	box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.search-box input{
+	flex:1;
+	border:none;
+	padding:12px 20px;
+	outline:none;
+	font-family:'Montserrat',sans-serif;
+}
+
+.search-box button{
+	background:#A81F45;
+	color:white;
+	border:none;
+	padding:0 20px;
+	cursor:pointer;
+}
+
+/* CARD */
+
+.list-card{
+	background:white;
+	border-radius:12px;
+	overflow:hidden;
+	box-shadow:0 15px 35px rgba(0,0,0,0.1);
+	transition:0.4s;
+}
+
+.list-card:hover{
+	transform:translateY(-10px);
+	box-shadow:0 25px 50px rgba(0,0,0,0.2);
+}
+
+.list-card img{
+	width:100%;
+	height:220px;
+	object-fit:cover;
+}
+
+/* INFO */
+
+.list-info{
+	padding:15px;
+}
+
+.list-info h5{
+	font-family:'Bebas Neue',sans-serif;
+	font-size:22px;
+	letter-spacing:1px;
+	color:#1F4463;
+}
+
+.list-info p{
+	font-size:14px;
+	color:#555;
+	font-family:'Montserrat',sans-serif;
+}
+
+/* BUTTON */
+
+.view-btn{
+	display:inline-block;
+	margin-top:10px;
+	padding:6px 14px;
+	background:#1F4463;
+	color:white;
+	border-radius:20px;
+	font-size:13px;
+	text-decoration:none;
+	transition:0.3s;
+}
+
+.view-btn:hover{
+	background:#A81F45;
+}
+.pagination-container{
+	margin-top:50px;
+}
+
+.pagination-custom{
+	list-style:none;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	gap:10px;
+	padding:0;
+}
+
+.pagination-custom li a{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	width:40px;
+	height:40px;
+	border-radius:50%;
+	background:white;
+	color:#1F4463;
+	font-family:'Montserrat',sans-serif;
+	font-size:14px;
+	text-decoration:none;
+	box-shadow:0 5px 15px rgba(0,0,0,0.1);
+	transition:0.3s;
+}
+
+/* hover */
+
+.pagination-custom li a:hover{
+	background:#A81F45;
+	color:white;
+	transform:translateY(-3px);
+}
+
+/* active */
+
+.pagination-custom li.active a{
+	background:#1F4463;
+	color:white;
+	box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
